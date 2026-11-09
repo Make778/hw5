@@ -1,0 +1,31 @@
+#Инициализируем 
+git init
+
+# Объявляем игнор файлов и директорий
+echo .gitignore >> .gitignore
+echo *.sass  >> .gitignore
+echo bin/ >> .gitignore
+echo admin/ >> .gitignore
+echo config/ >> .gitignore
+
+# Создаем директории и файл
+mkdir bin
+mkdir admin
+mkdir config
+echo >> .sass
+
+# Создаем новую ветку и переходим в нее
+git checkout -b blog
+
+# Создаем директорию blog и файлы index.js, index.html
+mkdir blog && cd blog
+echo >> index.js
+echo >> index.html
+cd ..
+
+# Загружаю на удаленный репозиторий основную ветку проекта
+git add .
+git commit -m "First commit"
+git remote add origin https://github.com/Make778/hw5.git
+git push -u origin master
+
