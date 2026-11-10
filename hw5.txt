@@ -22,11 +22,18 @@ git checkout blog
 mkdir blog && cd blog
 echo >> index.js
 echo >> index.html
+
+# Делаем коммит в блог, чтобы директория и файлы не торчали в основной ветке
+git add blog/
+git commit -m "blog added"
 cd ..
 
-# Загружаю на удаленный репозиторий основную ветку проекта
+# Перехожу в основную ветку!
+git checkout master
+echo >> index.html
+echo >> main.html
 git add .
-git commit -m "First commit"
+git commit -m "Added index and main. Updated hw5.txt"
 git remote add origin https://github.com/Make778/hw5.git
 git push -u origin master
 
