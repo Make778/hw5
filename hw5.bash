@@ -36,6 +36,7 @@ git checkout blog
 mkdir blog && cd blog
 echo >> index.js
 echo >> index.html
+echo >> file.txt
 
 # Смотрим статус
 git status
@@ -43,7 +44,27 @@ git status
 # Делаем коммит в блог, чтобы директория и файлы не торчали в основной ветке
 git add blog/
 git commit -m "blog added"
+
+# Удаляем файл из рабочей директории и из гит репозитория, чтобы не отслеживал его
+rm file.txt
+git rm file.txt
+git commit -m "remove file.txt"
+
+# Переходим в директорию выше
 cd ..
+
+
+# Перехожу в основную ветку!
+git checkout master
+
+# Слияние двух веток
+#git merge master blog
+
+
+# Добавляем в staging, а затем убираем из staging
+echo >> some.txt
+git add some.txt
+git restore --staged some.txt
 
 # Смотрим историю изменений
 # git reflog
