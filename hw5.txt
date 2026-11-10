@@ -16,6 +16,7 @@ mkdir imgs
 echo >> .sass
 echo >> index.html
 echo >> main.html
+echo >> imgs/text.txt
 git add .
 git commit -m "First commit"
 
