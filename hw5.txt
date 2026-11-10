@@ -8,11 +8,16 @@ echo bin/ >> .gitignore
 echo admin/ >> .gitignore
 echo config/ >> .gitignore
 
-# Создаем директории и файл
+# Создаем директории и файлы
 mkdir bin
 mkdir admin
 mkdir config
+mkdir imgs
 echo >> .sass
+echo >> index.html
+echo >> main.html
+git add .
+git commit -m "First commit"
 
 # Создаем новую ветку и переходим в нее
 git branch blog
@@ -30,10 +35,5 @@ cd ..
 
 # Перехожу в основную ветку!
 git checkout master
-echo >> index.html
-echo >> main.html
-git add .
-git commit -m "Added index and main. Updated hw5.txt"
 git remote add origin https://github.com/Make778/hw5.git
 git push -u origin master
-
