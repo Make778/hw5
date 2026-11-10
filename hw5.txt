@@ -15,7 +15,8 @@ mkdir config
 echo >> .sass
 
 # Создаем новую ветку и переходим в нее
-git checkout -b blog
+git branch blog
+git checkout blog
 
 # Создаем директорию blog и файлы index.js, index.html
 mkdir blog && cd blog
